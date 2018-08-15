@@ -17,15 +17,15 @@ def isPrime(n):
 
 def expand(n):#this is the core function of this program. It is recursive.
 
-    ns = str(n)
+    ns = str(n) #simply the string verison of n
 
     print "working on",n
 
     found = []
 
-    for i in range(1,10,2):
+    for i in range(1,10,2):#we only need try adding odd numbers, because any number ending with an even number is going to be non-prime (obviously except for 2 itself)
         ns += str(i)
-        for j in range(1,10):
+        for j in range(1,10):#we can't make the same simplification as before because this number is going to be appended as the most significant digit
             new = str(j)
             new += ns
             new = int(new)
