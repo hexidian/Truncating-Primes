@@ -20,7 +20,8 @@ def expand(n):#this is the core function of this program. It is recursive.
     ns = str(n) #simply the string verison of n
 
     print "working on",n
-
+    if len(ns) > 8:
+        return []
     found = []
 
     for i in range(1,10,2):#we only need try adding odd numbers, because any number ending with an even number is going to be non-prime (obviously except for 2 itself)
@@ -36,7 +37,7 @@ def expand(n):#this is the core function of this program. It is recursive.
                     found.append(new)
                     print "I found:",new
                 else:
-                    found.expand(deeperFound)
+                    found.extend(deeperFound)
         ns = ns[:-1]    #takes off the digit we just tested on the end
 
     return (found if found != [] else None)
