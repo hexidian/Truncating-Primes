@@ -20,7 +20,7 @@ def expand(n):#this is the core function of this program. It is recursive.
     ns = str(n) #simply the string verison of n
 
     print "working on",n
-    if len(ns) > 8:
+    if len(ns) > 8: #for now we will only look at short ones, so that it doesn't crash my computer
         return []
     found = []
 
@@ -43,7 +43,7 @@ def expand(n):#this is the core function of this program. It is recursive.
     return (found if found != [] else None)
 
 def main():
-    expand(5)#just a test number. The program should run with a non-prime number, but the results will only be meaningful if the seed is prime.
+    print expand(5)#just a test number. The program should run with a non-prime number, but the results will only be meaningful if the seed is prime.
 
 if __name__ == "__main__":
     main()
