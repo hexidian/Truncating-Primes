@@ -54,7 +54,7 @@ def expand(n):#this is the core function of this program. It is recursive.
 def main():
     found = []
     for i in [2,3,5,7]:
-        found.extend(expand(i))#just a test number. The program should run with a non-prime number, but the results will only be meaningful if the seed is prime.
+        found.extend(expand(i))
     print found
 if __name__ == "__main__":
     main()
